@@ -38,4 +38,3 @@ function flattenArrays() {
 
 
 
-IF(DOC_Type="V-Core Std Usecases", IF(SUM(Passed_Reqs)>(SUM(Total_Reqs)-SUM(Rejected_Reqs)),SUM(Passed_Reqs)/SUM(Total_Reqs),SUM(Passed_Reqs)/(SUM(Total_Reqs)-SUM(Rejected_Reqs))),null)
