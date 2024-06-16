@@ -18,9 +18,9 @@ function flattenArrays() {
   
 
   
-  var result = colA.reduce((acc, a) => {
+  var result = colA.reduce((ac, a) => {
     var temp = colC.flatMap(c => colE.flatMap(e => colG.map(g => [a, c, e, g])));
-    return acc.concat(temp);
+    return ac.concat(temp);
   }, []);
   
   // Add the headers to the result
@@ -35,6 +35,8 @@ function flattenArrays() {
   // Write the result to the "Dump" sheet starting from the first column
   dumpSheet.getRange(1, 1, result.length, result[0].length).setValues(result);
 }
+
+
 
 
 
